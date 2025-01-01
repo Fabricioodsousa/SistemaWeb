@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tripwise - Carrinho de Compras</title>
-    <link rel="shortcut icon" href="tripwise1.png" type="image/x-icon">
+    <title>Tripwise - Catálogo de Passeios</title>
+    <link rel="shortcut icon" href="../icons/tripwise1.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style_carrinho.css">
+    <link rel="stylesheet" href="../styles/style_catalogo.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -21,22 +21,25 @@
                     <li class="nav-item"><a class="nav-link active" href="quem-somos.html">Quem somos</a></li>
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
+                    <li class="nav-item"><a class="nav-link" id="authentication" href="login.html">Entrar</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Container do Carrinho -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Carrinho de Compras</h2>
-        <ul id="carrinho-lista" class="list-group mb-3"></ul>
-        <div class="text-center">
-            <button class="btn btn-success">Finalizar Compra</button>
+    <!-- Seção de Catálogo -->
+    <section id="catalogo" class="container mt-5">
+        <h2 class="text-center mb-4">Catálogo de Passeios</h2>
+        <div class="row" id="passeios-container">
+            <!-- Cards serão gerados dinamicamente aqui -->
         </div>
-    </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="carrinho.js"></script>
+    <script src="../scripts/scriptCatalogo.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="../scripts/firebaseAuth.js"></script>
+
 </body>
 </html>
